@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>History</title>
+    <title>Closed Transaction History</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/uikit.css" />
@@ -108,7 +108,7 @@
         </div>
     </div>
     <div class="uk-width-1-1 uk-text-large uk-padding-small">
-        Hello Vershima Tingir,
+        Closed Transactions History
 
     </div>
     <div class="uk-padding-large">
@@ -120,42 +120,36 @@
                 <div class="uk-width-1-1 uk-grid-large uk-child-width-1-4@s" uk-grid>
                     <div class="uk-card uk-card-body">
                         <div class="uk-margin">
-                            <label class="uk-form-label" for="form-stacked-text">Start Date</label>
+                            
                             <input class="uk-input" type="date" placeholder="Start Date">
+                            <label class="uk-form-label" for="form-stacked-text">Start Date</label>
                         </div>
                     </div>
                     <div class="uk-card uk-card-body">
                         <div class="uk-margin">
-                            <label class="uk-form-label" for="form-stacked-text">End Date</label>
+                            
                             <input class="uk-input" type="date" placeholder="End Date">
+                            <label class="uk-form-label" for="form-stacked-text">End Date</label>
                         </div>
                     </div>
                     <div class="uk-card uk-card-body">
                         <div class="uk-margin">
-                            <label class="uk-form-label" for="form-stacked-text">Transaction Type</label>
+                            
                             <select class="uk-select uk-rounded">
                                 <option selected disabled>Transacion Type</option>
                                 <option>Petty Cash</option>
                                 <option>Online Transfer</option>
                             </select>
+                            <label class="uk-form-label" for="form-stacked-text">Transaction Type</label>
                         </div>
                     </div>
                     <div class="uk-card uk-card-body">
-                        <label class="uk-form-label" for="form-stacked-text">Status</label>
-                        <select id='status' class="uk-select" name='organization' style='width: 100%' multiple='multiple'>
-                            <option value="pending">Pending</option>
-                            <option value="approved">Approved</option>
-                            <option value="pr">Pending Retirement</option>
-                            <option value="pr">Sent Back</option>
-                            <option value="pr">Declined</option>
-                            <option value="ct">Closed Transactions</option>
-
-                        </select>
-                        <script type="text/javascript">
-                            $('#status').select2({
-                                placeholder: "Status"
-                            });
-                        </script>
+                
+                            <form class="uk-search uk-search-default uk-width-1-1">
+                                <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                                <input class="uk-search-input" type="search" placeholder="Search...">
+                            </form>
+                        
                     </div>
 
                 </div>
@@ -181,8 +175,9 @@
                         <th>Transaction Type</th>
                         <th>Description</th>
                         <th>Amount</th>
-                        <th>Status</th>
-                        <th>Comments</th>
+                        <th>Approved By</th>
+                        <th>Close Date</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -192,8 +187,9 @@
                         <td>Petty Cash</td>
                         <td>Transportation to Deeper Life High School</td>
                         <td><span class="uk-text-uppercase uk-margin-right">NGN</span>3,000.00</td>
-                        <td>Approved</td>
-                        <td>None</td>
+                        <td>Faith E</td>
+                        <td>8/12/2018</td>
+                        
                     </tr>
 
                 </tbody>

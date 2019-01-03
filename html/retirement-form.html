@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Retirement Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/uikit.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+</head>
+
+<body>
+    <nav class="uk-navbar-container uk-margin" uk-navbar>
+        <div class="uk-navbar-left">
+
+            <ul class="uk-navbar-nav">
+                <li class="uk-active">
+                    <a href="#mega-menu" uk-toggle uk-icon="icon: menu"></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div id="mega-menu" uk-offcanvas="mode: reveal; overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="uk-active">
+                    <a href="#">Home</a>
+                </li>
+                <li class="uk-parent">
+                    <li class="uk-nav-header">Request Funds</li>
+                    <ul class="uk-nav-sub">
+                        <li>
+                            <a href="#petty-cash" uk-toggle>Petty Cash</a>
+                        </li>
+                        <li>
+                            <a href="#online-transfer" uk-toggle>Online Transfer</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                    <li class="uk-nav-header">Retirement</li>
+                    <ul class="uk-nav-sub">
+                        <li>
+                            <a href="#">Pending Retirement</a>
+                        </li>
+                        <li>
+                            <a href="#">Submitted Retirement</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="uk-parent uk-active">
+                    <li class="uk-nav-header">History</li>
+                    <ul class="uk-nav-sub">
+                        <li>
+                            <a href="#">Approved Transactions</a>
+                        </li>
+                        <li>
+                            <a href="#">Petty Cash Transactions</a>
+                        </li>
+                        <li>
+                            <a href="#">Online Transfer Transactions</a>
+                        </li>
+                        <li>
+                            <a href="#">Closed Transactions</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                    <li class="uk-nav-header">Pending Requests</li>
+                    <ul class="uk-nav-sub">
+                        <li>
+                            <a href="#">Sent Back</a>
+                        </li>
+                        <li>
+                            <a href="#">Petty Cash</a>
+                        </li>
+                        <li>
+                            <a href="#">Online Transfer</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                    <li class="uk-nav-header">Profile</li>
+                    <ul class="uk-nav-sub">
+                        <li>
+                            <a href="#">Manage Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">Change Password</a>
+                        </li>
+                        <li>
+                            <a href="#">Digital Signature</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="petty-cash" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Petty Cash</h2>
+            </div>
+            <div class="uk-modal-body">
+                <form>
+                    <fieldset class="uk-fieldset">
+
+                        <legend class="uk-legend">Petty Cash Requisition Form</legend>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Amount</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Title of Expense</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
+                            <div class="uk-form-controls">
+                                <textarea class="uk-textarea" rows="3" placeholder="Short Description"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" type="button">Save</button>
+            </div>
+        </div>
+    </div>
+    <div id="online-transfer" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Online Transfer</h2>
+            </div>
+            <div class="uk-modal-body">
+                <form>
+                    <fieldset class="uk-fieldset">
+
+                        <legend class="uk-legend">Funds Requisition Form</legend>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="1,000">
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Amount In Words</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="1,000">
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
+                            <div class="uk-form-controls">
+                                <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="uk-fieldset">
+
+                        <legend class="uk-legend">Online Fund Transfer Form</legend>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Name of Beneficiary</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="1,000">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Account No of Beneficiary</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="1,000">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="1,000">
+                            </div>
+                        </div>
+
+
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Narration</label>
+                            <div class="uk-form-controls">
+                                <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary  uk-modal-close" type="button" onclick="UIkit.notification({message: 'Request Successfully sent', status: 'success'})">Request</button>
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-1-1 uk-text-large uk-padding-small">
+        Retirement Form
+
+    </div>
+    <div class="uk-padding-large">
+        <form>
+            <fieldset class="uk-fieldset">
+
+                <legend class="uk-legend uk-margin">Upload Receipts</legend>
+                <div class="uk-grid-medium uk-child-width-1-3" uk-grid>
+                    <div>
+                        <div class="uk-margin" uk-margin>
+                            <div uk-form-custom="target: true">
+                                <input type="file">
+                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-margin" uk-margin>
+                            <div uk-form-custom="target: true">
+                                <input type="file">
+                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-margin" uk-margin>
+                            <div uk-form-custom="target: true">
+                                <input type="file">
+                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-margin" uk-margin>
+                            <div uk-form-custom="target: true">
+                                <input type="file">
+                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-margin" uk-margin>
+                            <div uk-form-custom="target: true">
+                                <input type="file">
+                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-margin" uk-margin>
+                            <div uk-form-custom="target: true">
+                                <input type="file">
+                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="uk-padding-large">
+        <div class="uk-width-1-1">
+            <div class="uk-text-medium uk-child-width-1-2" uk-grid>
+                <div>
+                    Travel Expense
+                    <a class="uk-margin-left" uk-icon="icon: plus" href="#add-travel-ex" uk-tooltip="title: Add Travel Expense; pos: bottom"
+                        uk-toggle></a>
+                    <a class="uk-margin-left" uk-icon="icon: minus" href="#clear-travel" uk-tooltip="title: Clear Travel Expense; pos: bottom"
+                        uk-toggle></a>
+                </div>
+                <div>
+                    <div class="uk-margin-left uk-width-1-2">
+                        <select class="uk-select">
+                            <option>Naira</option>
+                            <option>USD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match  uk-flex-center " uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">Hotel</h3>
+                        <div class="" uk-grid>
+                            <div class="uk-width-3-4">
+                                <div class="">Description</div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">
+                                    <span class="uk-text-uppercase uk-margin-right">NGN</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-box-shadow-hover-xlarge" uk-toggle="target: #edit-expense" uk-grid>
+
+                            <div class="uk-width-3-4">
+                                <div class="">Transportation To, within and from Kaduna</div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">45,000.00 </div>
+                            </div>
+                        </div>
+                        <div class="uk-box-shadow-hover-xlarge" uk-toggle="target: #edit-expense" uk-grid>
+
+                                <div class="uk-width-3-4">
+                                    <div class="">Transportation To, within and from Kaduna</div>
+                                </div>
+                                <div class="uk-width-1-4">
+                                    <div class="">45,000.00 </div>
+                                </div>
+                            </div>
+                        <hr>
+                        <div class="" uk-grid>
+
+                            <div class="uk-width-3-4">
+                                <div class="">
+                                    <b>Total</b>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">45,000.00 </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">Airport Taxi</h3>
+                        <div class="" uk-grid>
+                            <div class="uk-width-3-4">
+                                <div class="">Description</div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">
+                                    <span class="uk-text-uppercase uk-margin-right">NGN</span>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="uk-box-shadow-hover-xlarge" uk-toggle="target: #edit-expense" uk-grid>
+
+                                <div class="uk-width-3-4">
+                                    <div class="">Transportation To, within and from Kaduna</div>
+                                </div>
+                                <div class="uk-width-1-4">
+                                    <div class="">45,000.00 </div>
+                                </div>
+                            </div>
+                        <hr>
+                        <div class="" uk-grid>
+
+                            <div class="uk-width-3-4">
+                                <div class="">
+                                    <b>Total</b>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">45,000.00 </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">Local Transport</h3>
+                        <div class="" uk-grid>
+                            <div class="uk-width-3-4">
+                                <div class="">Description</div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">
+                                    <span class="uk-text-uppercase uk-margin-right">NGN</span>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="uk-box-shadow-hover-xlarge" uk-toggle="target: #edit-expense" uk-grid>
+
+                                <div class="uk-width-3-4">
+                                    <div class="">Transportation To, within and from Kaduna</div>
+                                </div>
+                                <div class="uk-width-1-4">
+                                    <div class="">45,000.00 </div>
+                                </div>
+                            </div>
+                        <hr>
+                        <div class="" uk-grid>
+
+                            <div class="uk-width-3-4">
+                                <div class="">
+                                    <b>Total</b>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">45,000.00 </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">Meals</h3>
+                        <div class="" uk-grid>
+                            <div class="uk-width-3-4">
+                                <div class="">Description</div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">
+                                    <span class="uk-text-uppercase uk-margin-right">NGN</span>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="uk-box-shadow-hover-xlarge" uk-toggle="target: #edit-expense" uk-grid>
+
+                                <div class="uk-width-3-4">
+                                    <div class="">Transportation To, within and from Kaduna</div>
+                                </div>
+                                <div class="uk-width-1-4">
+                                    <div class="">45,000.00 </div>
+                                </div>
+                            </div>
+                        <hr>
+                        <div class="" uk-grid>
+
+                            <div class="uk-width-3-4">
+                                <div class="">
+                                    <b>Total</b>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">45,000.00 </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">Miscellaneous</h3>
+                        <div class="" uk-grid>
+                            <div class="uk-width-3-4">
+                                <div class="">Description</div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">
+                                    <span class="uk-text-uppercase uk-margin-right">NGN</span>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="uk-box-shadow-hover-xlarge" uk-toggle="target: #edit-expense" uk-grid>
+
+                                <div class="uk-width-3-4">
+                                    <div class="">Transportation To, within and from Kaduna</div>
+                                </div>
+                                <div class="uk-width-1-4">
+                                    <div class="">45,000.00 </div>
+                                </div>
+                            </div>
+                        <hr>
+                        <div class="" uk-grid>
+
+                            <div class="uk-width-3-4">
+                                <div class="">
+                                    <b>Total</b>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="">45,000.00 </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-primary uk-card-body">
+                        <h3 class="uk-card-title">Total</h3>
+                        <div class="uk-grid-small" uk-grid>
+
+                            <div class="uk-width-1-2">
+                                <div class="">
+                                    <b>Sub Total</b>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="">
+                                    <span class="uk-text-uppercase uk-margin-small-right">NGN</span>45,000.00 </div>
+                            </div>
+                        </div>
+                        <div class="uk-grid-small" uk-grid>
+
+                            <div class="uk-width-1-2">
+                                <div class="">
+                                    <b>Advances</b>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="">
+                                    <div class="uk-margin">
+                                        <input class="uk-input uk-child-width-1-1" type="number" placeholder="0.00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="uk-grid-collapse" uk-grid>
+
+                            <div class="uk-width-1-2">
+                                <div class="">
+                                    <b>Total</b>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-2">
+                                <div class="">
+                                    <span class="uk-text-uppercase uk-margin-small-right">NGN</span>45,000.00 </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+        </div>
+
+    </div>
+    <div class="uk-padding-large">
+        <button class="uk-button uk-button-secondary uk-float-right uk-width-1-3">Submit</button>
+
+    </div>
+    <div id="add-travel-ex" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Add a Travel Expense</h2>
+            </div>
+            <div class="uk-modal-body">
+                <form class="uk-form-stacked">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-select">Expense Type</label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select" id="form-stacked-select">
+                                <option selected disabled>Select Expense Type</option>
+                                <option>Hotel</option>
+                                <option>Airport Taxi</option>
+                                <option>Local Transport</option>
+                                <option>Meals</option>
+                                <option>Misc</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">Descripion</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">Amount</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-stacked-text" type="number" placeholder="0.00">
+                        </div>
+                    </div>
+
+
+
+
+
+                </form>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary uk-modal-close" type="button">Add</button>
+            </div>
+        </div>
+    </div>
+    <div id="clear-travel" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+
+            <p>Are you sure you want to clear travel expense</p>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary uk-modal-close" type="button" onclick="UIkit.notification({message: 'Successful', pos: 'bottom-center'})">Yes</button>
+            </div>
+
+        </div>
+    </div>
+    <div id="edit-expense" uk-modal>
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div class="uk-modal-header">
+                    <h2 class="uk-modal-title">Edit a Travel Expense</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <form class="uk-form-stacked">
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-select">Expense Type</label>
+                            <div class="uk-form-controls">
+                                <select class="uk-select" id="form-stacked-select">
+                                    <option selected disabled>Select Expense Type</option>
+                                    <option>Hotel</option>
+                                    <option>Airport Taxi</option>
+                                    <option>Local Transport</option>
+                                    <option>Meals</option>
+                                    <option>Misc</option>
+    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-text">Descripion</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-text">Amount</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-stacked-text" type="number" placeholder="0.00">
+                            </div>
+                        </div>
+    
+    
+    
+    
+    
+                    </form>
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button class="uk-button uk-button-danger uk-modal-close uk-float-left" type="button" onclick="UIkit.notification({message: 'Successfully Deleted', pos: 'bottom-center'})">Delete</button>
+                    <button class="uk-button uk-button-primary uk-modal-close" type="button" onclick="UIkit.notification({message: 'Successfully Added', pos: 'bottom-center'})">Add</button>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
