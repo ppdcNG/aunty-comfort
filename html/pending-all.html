@@ -2,12 +2,15 @@
 <html>
 
 <head>
-    <title>Home</title>
+    <title>Pending All</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/uikit.css" />
     <script src="../js/uikit.min.js"></script>
     <script src="../js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -22,6 +25,9 @@
 
         </div>
         <div class="uk-navbar-center">
+
+
+
         </div>
     </nav>
     <div id="mega-menu" uk-offcanvas="mode: reveal; overlay: true">
@@ -56,6 +62,7 @@
                 <li class="uk-parent uk-active">
                     <li class="uk-nav-header">History</li>
                     <ul class="uk-nav-sub">
+
                         <li>
                             <a href="#">Petty Cash Transactions</a>
                         </li>
@@ -71,7 +78,7 @@
                     <li class="uk-nav-header">Pending Requests</li>
                     <ul class="uk-nav-sub">
                         <li>
-                            All Pending
+                            <a href="#">All Pending</a>
                         </li>
                         <li>
                             <a href="#">Sent Back</a>
@@ -85,7 +92,7 @@
                         <li>
                             <a href="#">Manage Profile</a>
                         </li>
-                        <li>Log Out</li>
+                       <li>Log Out</li>
                     </ul>
                 </li>
             </ul>
@@ -93,87 +100,76 @@
         </div>
     </div>
     <div class="uk-width-1-1 uk-text-large uk-padding-small">
-        Welcome Vershima Tingir,
+        All Pending
 
     </div>
     <div class="uk-padding-large">
-        <div class="uk-card uk-card-default uk-card-body uk-width-1-1">
-            <div class="uk-grid-large uk-child-width-1-2@s" uk-grid>
-                <div class="uk-card">
+        <div class="uk-text-medium uk-text-center uk-width-1-1">
+            FILTER
+        </div>
+        <div class="uk-grid-collapse" uk-grid>
+            <div class="uk-width-expand">
+                <div class="uk-width-1-1 uk-grid-small uk-child-width-1-3@s" uk-grid>
+                    <div class="uk-card uk-card-body">
+                        <div class="">
 
-                    <div class="uk-grid-small uk-flex-middle" uk-grid>
-                        <div class="uk-width-auto">
-                            <img class="" width="100%" src="../images/download-big-arrow (1).png">
-                        </div>
-                        <div class="uk-width-expand">
-                            <h3 class="uk-card-title uk-margin-remove-bottom">Requested</h3>
-                            <p class="uk-text-meta uk-margin-remove-top">Total Amount:
-                                <span class="uk-text-bold">&#8358; 40,000</span>
-                            </p>
-                            <p class="uk-text-meta uk-margin-remove-top">No of Rquests:
-                                <span class="uk-text-bold"></span>
-                            </p>
+                            <input class="uk-input" type="date" placeholder="Start Date">
+                            <label class="uk-form-label" for="form-stacked-text">Start Date</label>
                         </div>
                     </div>
-                </div>
-                <div class="uk-card">
+                    <div class="uk-card uk-card-body">
+                        <div class="">
 
-                    <div class="uk-grid-small uk-flex-middle" uk-grid>
-                        <div class="uk-width-auto">
-                            <img class="" width="100%" src="../images/check.png">
-                        </div>
-                        <div class="uk-width-expand">
-                            <h3 class="uk-card-title uk-margin-remove-bottom">Approved</h3>
-                            <p class="uk-text-meta uk-margin-remove-top">Total Amount:
-                                <span class="uk-text-bold">&#8358; 10,000</span>
-                            </p>
-                            <p class="uk-text-meta uk-margin-remove-top">No of Rquests:
-                                <span class="uk-text-bold"></span>
-                            </p>
+                            <input class="uk-input" type="date" placeholder="End Date">
+                            <label class="uk-form-label" for="form-stacked-text">End Date</label>
                         </div>
                     </div>
-                </div>
-                <div class="uk-card">
+                    <div class="uk-card uk-card-body">
+                        <div class="">
 
-                    <div class="uk-grid-small uk-flex-middle" uk-grid>
-                        <div class="uk-width-auto">
-                            <img class="" width="100%" src="../images/hourglass.png">
-                        </div>
-                        <div class="uk-width-expand">
-                            <h3 class="uk-card-title uk-margin-remove-bottom">Pending</h3>
-                            <p class="uk-text-meta uk-margin-remove-top">Total Amount:
-                                <span class="uk-text-bold">&#8358; 30,000</span>
-                            </p>
-                            <p class="uk-text-meta uk-margin-remove-top">No of Rquests:
-                                <span class="uk-text-bold"></span>
-                            </p>
+                            <select class="uk-select uk-rounded">
+                                <option selected disabled>Transacion Type</option>
+                                <option>Petty Cash</option>
+                                <option>Online Transfer</option>
+                            </select>
+                            <label class="uk-form-label" for="form-stacked-text">Transaction Type</label>
                         </div>
                     </div>
-                </div>
-                <div class="uk-card">
 
-                    <div class="uk-grid-small uk-flex-middle" uk-grid>
-                        <div class="uk-width-auto">
-                            <img class="" width="100%" src="../images/close.png">
+                    <div class="uk-card uk-card-body">
+                        <div class="">
+
+                            <input class="uk-input" type="number" placeholder="0.00">
+                            <label class="uk-form-label" for="form-stacked-text">Start Amount</label>
                         </div>
-                        <div class="uk-width-expand">
-                            <h3 class="uk-card-title uk-margin-remove-bottom">Closed</h3>
-                            <p class="uk-text-meta uk-margin-remove-top">Total Amount:
-                                <span class="uk-text-bold">&#8358; 50,000</span>
-                            </p>
-                            <p class="uk-text-meta uk-margin-remove-top">No of Rquests:
-                                <span class="uk-text-bold"></span>
-                            </p>
+                    </div>
+                    <div class="uk-card uk-card-body">
+                        <div class="">
+
+                            <input class="uk-input" type="number" placeholder="0.00">
+                            <label class="uk-form-label" for="form-stacked-text">End Amount</label>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body">
+                        <div class="">
+                            <form class="uk-search uk-search-default uk-width-1-1">
+                                <span class="uk-search-icon-flip" uk-search-icon></span>
+                                <input class="uk-search-input uk-width-1-1" type="search" placeholder="Search...">
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
+
+
     <div class="uk-padding-large">
         <div class="uk-card uk-card-default uk-card-body uk-width-1-1">
             <div class="uk-text-medium">
-                RECENT TRANSACTIONS
+                ALL TRANSACTIONS
             </div>
             <hr>
             <table class="uk-table">
@@ -181,41 +177,36 @@
                 <thead>
                     <tr>
                         <th>S/N</th>
-                        <th>Date</th>
+                        <th>Request Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
                         <th>Transaction Type</th>
-                        <th>Describtion</th>
-                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
                         <td>8/12/2018</td>
-                        <td>Petty Cash</td>
+
                         <td>Transportation to Deeper Life High School</td>
-                        <td>Approved</td>
+                        <td>
+                            <span class="uk-text-uppercase uk-margin-right">NGN</span>4000</td>
+                        <td>Online Transaction</td>
                     </tr>
                     <tr>
-                        <td>2</td>
+                        <td>1</td>
                         <td>8/12/2018</td>
+
+                        <td>Transportation to Deeper Life High School</td>
+                        <td>
+                            <span class="uk-text-uppercase uk-margin-right">NGN</span>4000</td>
                         <td>Petty Cash</td>
-                        <td>Transportation to NEITI for meeting on Implementing Open Contracting</td>
-                        <td>Transaction Closed</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>8/12/2018</td>
-                        <td>Online Transfer</td>
-                        <td>Mobile Data Subscribtion</td>
-                        <td>Awaiting Retirement</td>
                     </tr>
                 </tbody>
-                <caption>Table Caption</caption>
+
             </table>
             <hr>
-            <div class="uk-text-medium uk-text-center">
-                <a href="#" class="">View Full History</a>
-            </div>
+
         </div>
 
     </div>

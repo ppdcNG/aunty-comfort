@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Petty Cash History</title>
+    <title>Send Back Pending</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/uikit.css" />
@@ -78,14 +78,12 @@
                     <li class="uk-nav-header">Pending Requests</li>
                     <ul class="uk-nav-sub">
                         <li>
+                            <a href="#">All Pending</a>
+                        </li>
+                        <li>
                             <a href="#">Sent Back</a>
                         </li>
-                        <li>
-                            <a href="#">Petty Cash</a>
-                        </li>
-                        <li>
-                            <a href="#">Online Transfer</a>
-                        </li>
+
                     </ul>
                 </li>
                 <li class="uk-parent">
@@ -94,12 +92,7 @@
                         <li>
                             <a href="#">Manage Profile</a>
                         </li>
-                        <li>
-                            <a href="#">Change Password</a>
-                        </li>
-                        <li>
-                            <a href="#">Digital Signature</a>
-                        </li>
+                       <li>Log Out</li>
                     </ul>
                 </li>
             </ul>
@@ -183,10 +176,10 @@
 
                 <thead>
                     <tr>
-                        <th>S/N</th>
                         <th>Request Date</th>
                         <th>Description</th>
                         <th>Amount</th>
+                        <th>Transaction Type</th>
                         <th>Checked By</th>
                         <th>Comment </th>
                         <th>Send Back Date</th>
@@ -195,143 +188,276 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
                         <td>8/12/2018</td>
 
                         <td>Transportation to Deeper Life High School</td>
                         <td>
                             <span class="uk-text-uppercase uk-margin-right">NGN</span>4000</td>
+                        <td>Online Transaction</td>
                         <td>Faith E</td>
                         <td>
                             Reduce Amount to reflect new estimates
                         </td>
                         <td>8/12/2018</td>
-                        <td><a href="" uk-icon="icon: pencil" uk-tooltip="title: Click to Ammend; pos: bottom"></a></td>
+                        <td>
+                            <a href="#online-transfer-edit" uk-toggle uk-icon="icon: pencil" uk-tooltip="title: Click to Ammend; pos: bottom"></a>
+                        </td>
                     </tr>
+                    <tr>
+                        <td>8/12/2018</td>
 
+                        <td>Transportation to Deeper Life High School</td>
+                        <td>
+                            <span class="uk-text-uppercase uk-margin-right">NGN</span>4000</td>
+                        <td>Petty Cash</td>
+                        <td>Faith E</td>
+                        <td>
+                            Reduce Amount to reflect new estimates
+                        </td>
+                        <td>8/12/2018</td>
+                        <td>
+                            <a href="#petty-cash-edit" uk-toggle uk-icon="icon: pencil" uk-tooltip="title: Click to Ammend; pos: bottom"></a>
+                        </td>
+                    </tr>
                 </tbody>
-                
+
             </table>
             <hr>
 
         </div>
 
     </div>
-    <div id="petty-cash" uk-modal>
-        <div class="uk-modal-dialog">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <div class="uk-modal-header">
-                <h2 class="uk-modal-title">Petty Cash</h2>
-            </div>
-            <div class="uk-modal-body">
-                <form>
-                    <fieldset class="uk-fieldset">
-
-                        <legend class="uk-legend">Petty Cash Requisition Form</legend>
-
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Amount</label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="">
+    <div id="petty-cash-edit" uk-modal>
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div class="uk-modal-header">
+                    <h2 class="uk-modal-title">Edit Petty Cash Request</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <form>
+                        <fieldset class="uk-fieldset">
+    
+                            <legend class="uk-legend">Petty Cash Requisition Form</legend>
+    
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Amount</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00" value="">
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Title of Expense</label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+    
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Title of Expense</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="" value="">
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
-                            <div class="uk-form-controls">
-                                <textarea class="uk-textarea" rows="3" placeholder="Short Description"></textarea>
+    
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
+                                <div class="uk-form-controls">
+                                    <textarea class="uk-textarea" rows="3" placeholder="Short Description"></textarea>
+                                </div>
                             </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="uk-modal-footer uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                <button class="uk-button uk-button-primary" type="button">Save</button>
-            </div>
-        </div>
-    </div>
-    <div id="online-transfer" uk-modal>
-        <div class="uk-modal-dialog">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <div class="uk-modal-header">
-                <h2 class="uk-modal-title">Online Transfer</h2>
-            </div>
-            <div class="uk-modal-body">
-                <form>
-                    <fieldset class="uk-fieldset">
-
-                        <legend class="uk-legend">Funds Requisition Form</legend>
-
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="1,000">
-                            </div>
-                        </div>
-
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Amount In Words</label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="1,000">
-                            </div>
-                        </div>
-
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
-                            <div class="uk-form-controls">
-                                <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="uk-fieldset">
-
-                        <legend class="uk-legend">Online Fund Transfer Form</legend>
-
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Name of Beneficiary</label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="1,000">
-                            </div>
-                        </div>
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Account No of Beneficiary</label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="1,000">
-                            </div>
-                        </div>
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="1,000">
-                            </div>
-                        </div>
-
-
-
-                        <div class="uk-margin">
-                            <label class="uk-form-label" for="form-horizontal-text">Narration</label>
-                            <div class="uk-form-controls">
-                                <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
-                            </div>
-                        </div>
-
-                    </fieldset>
-                </form>
-            </div>
-            <div class="uk-modal-footer uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
-                <button class="uk-button uk-button-primary  uk-modal-close" type="button" onclick="UIkit.notification({message: 'Request Successfully sent', status: 'success'})">Request</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                    <button class="uk-button uk-button-primary" type="button">Save</button>
+                </div>
             </div>
         </div>
-    </div>
+    
+    <div id="online-transfer-edit" uk-modal>
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div class="uk-modal-header">
+                    <h2 class="uk-modal-title">Edit Online Transfer Request</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <form>
+                        <fieldset class="uk-fieldset">
+    
+                            <legend class="uk-legend">Funds Requisition Form</legend>
+    
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00" value="">
+                                </div>
+                            </div>
+    
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Amount In Words</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="" value="">
+                                </div>
+                            </div>
+    
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
+                                <div class="uk-form-controls">
+                                    <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="uk-fieldset">
+    
+                            <legend class="uk-legend">Online Fund Transfer Form</legend>
+    
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Name of Beneficiary</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="0.00" value="">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Account No of Beneficiary</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="number" placeholder="" value="">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00" value="">
+                                </div>
+                            </div>
+    
+    
+    
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Narration</label>
+                                <div class="uk-form-controls">
+                                    <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
+                                </div>
+                            </div>
+    
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
+                    <button class="uk-button uk-button-primary  uk-modal-close" type="button" onclick="UIkit.notification({message: 'Request Successfully sent', status: 'success'})">Request</button>
+                </div>
+            </div>
+        </div>
+        <div id="petty-cash" uk-modal>
+                <div class="uk-modal-dialog">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-modal-header">
+                        <h2 class="uk-modal-title">Petty Cash</h2>
+                    </div>
+                    <div class="uk-modal-body">
+                        <form>
+                            <fieldset class="uk-fieldset">
+        
+                                <legend class="uk-legend">Petty Cash Requisition Form</legend>
+        
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Amount</label>
+                                    <div class="uk-form-controls">
+                                        <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
+                                    </div>
+                                </div>
+        
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Title of Expense</label>
+                                    <div class="uk-form-controls">
+                                        <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+                                    </div>
+                                </div>
+        
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
+                                    <div class="uk-form-controls">
+                                        <textarea class="uk-textarea" rows="3" placeholder="Short Description"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="uk-modal-footer uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                        <button class="uk-button uk-button-primary" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div id="online-transfer" uk-modal>
+                <div class="uk-modal-dialog">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-modal-header">
+                        <h2 class="uk-modal-title">Online Transfer</h2>
+                    </div>
+                    <div class="uk-modal-body">
+                        <form>
+                            <fieldset class="uk-fieldset">
+        
+                                <legend class="uk-legend">Funds Requisition Form</legend>
+        
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
+                                    <div class="uk-form-controls">
+                                        <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
+                                    </div>
+                                </div>
+        
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Amount In Words</label>
+                                    <div class="uk-form-controls">
+                                        <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+                                    </div>
+                                </div>
+        
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
+                                    <div class="uk-form-controls">
+                                        <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="uk-fieldset">
+        
+                                <legend class="uk-legend">Online Fund Transfer Form</legend>
+        
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Name of Beneficiary</label>
+                                    <div class="uk-form-controls">
+                                        <input class="uk-input" id="form-horizontal-text" type="text" placeholder="0.00">
+                                    </div>
+                                </div>
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Account No of Beneficiary</label>
+                                    <div class="uk-form-controls">
+                                        <input class="uk-input" id="form-horizontal-text" type="number" placeholder="000">
+                                    </div>
+                                </div>
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
+                                    <div class="uk-form-controls">
+                                        <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
+                                    </div>
+                                </div>
+        
+        
+        
+                                <div class="uk-margin">
+                                    <label class="uk-form-label" for="form-horizontal-text">Narration</label>
+                                    <div class="uk-form-controls">
+                                        <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
+                                    </div>
+                                </div>
+        
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="uk-modal-footer uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
+                        <button class="uk-button uk-button-primary  uk-modal-close" type="button" onclick="UIkit.notification({message: 'Request Successfully sent', status: 'success'})">Request</button>
+                    </div>
+                </div>
+            </div>
 </body>
 
 </html>
