@@ -97,201 +97,243 @@
 
     </div>
     <div class="uk-padding-large">
-            <div class="uk-section uk-section-primary uk-preserve-color">
-                    <div class="uk-container">
-                
-                        <div class="uk-panel uk-light uk-margin-medium">
-                            <h3>Personal</h3>
+        <div class="uk-section uk-section-primary uk-preserve-color">
+            <div class="uk-container">
+
+                <div class="uk-panel uk-light uk-margin-medium">
+                    <h3 class=" uk-inline">Personal</h3>
+                    <a href="#edit-profile" uk-toggle class="uk-icon-button uk-float-right" uk-icon="file-edit" uk-tooltip="title: Edit Profile; pos: bottom"></a>
+                </div>
+
+                <div class="uk-grid-match uk-child-width-1-3" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center uk-flex uk-flex-center uk-flex-middle uk-text-large">
+                            <p>Vershima Tingir</p>
                         </div>
-                
-                        <div class="uk-grid-match uk-child-width-1-3" uk-grid>
-                            <div>
-                                <div class="uk-card uk-card-default uk-card-body uk-text-center uk-flex uk-flex-center">
-                                    <p>Vershima Tingir</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="uk-card uk-card-default uk-card-body uk-text-center">
-                                    <p>Software Developer</p>
-                                </div>
-                            </div>
-                            <div>
-                                    <div class="uk-card uk-card-default uk-card-body">
-                                        <!-- <p>Software Developer</p> -->
-                                        <div class="uk-width-medium">
-                                        <img src="../images/sig.PNG" alt="Signature"/>
-                                    </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center uk-flex uk-flex-center uk-flex-middle uk-text-large">
+                            <p>Software Developer</p>
                         </div>
-                
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <!-- <p>Software Developer</p> -->
+                            <div class="uk-width-medium">
+                                <img src="../images/sig.PNG" alt="Signature" />
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+        </div>
     </div>
     <div class="uk-padding-large">
-        <div class="uk-card uk-card-default uk-card-body uk-width-1-1">
-            <div class="uk-text-medium">
-                RECENT TRANSACTIONS
-            </div>
-            <hr>
-            <table class="uk-table">
+        <div class="uk-section uk-section-primary uk-preserve-color">
+            <div class="uk-container">
+                <form>
+                    <div class="uk-panel uk-light uk-margin-medium">
+                        <h3 class=" uk-inline">Password</h3>
+                        <a href="#" uk-toggle class="uk-icon-button uk-float-right" uk-icon="upload" uk-tooltip="title: Save; pos: bottom"></a>
+                    </div>
 
-                <thead>
-                    <tr>
-                        <th>S/N</th>
-                        <th>Date</th>
-                        <th>Transaction Type</th>
-                        <th>Describtion</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>8/12/2018</td>
-                        <td>Petty Cash</td>
-                        <td>Transportation to Deeper Life High School</td>
-                        <td>Approved</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>8/12/2018</td>
-                        <td>Petty Cash</td>
-                        <td>Transportation to NEITI for meeting on Implementing Open Contracting</td>
-                        <td>Transaction Closed</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>8/12/2018</td>
-                        <td>Online Transfer</td>
-                        <td>Mobile Data Subscribtion</td>
-                        <td>Awaiting Retirement</td>
-                    </tr>
-                </tbody>
-                <caption>Table Caption</caption>
-            </table>
-            <hr>
-            <div class="uk-text-medium uk-text-center">
-                <a href="#" class="">View Full History</a>
+                    <div class="uk-grid-match uk-child-width-1-3" uk-grid>
+                        <div>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-flex uk-flex-center uk-flex-middle">
+                                    <div class="">
+                                            <label class="uk-form-label" for="form-horizontal-text">Current Password</label>
+                                            <div class="uk-form-controls uk-width-1-1">
+                                                <input class="uk-input" id="form-horizontal-text" type="password" placeholder="current password">
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-flex uk-flex-center uk-flex-middle">
+                                    <div class="">
+                                            <label class="uk-form-label" for="form-horizontal-text">New Password</label>
+                                            <div class="uk-form-controls uk-width-1-1">
+                                                <input class="uk-input" id="form-horizontal-text" type="password" placeholder="New Password">
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default uk-card-body uk-flex uk-flex-center uk-flex-middle uk-text-center">
+                                    <div class="">
+                                            <label class="uk-form-label" for="form-horizontal-text">Confirm Password</label>
+                                            <div class="uk-form-controls uk-width-1-1">
+                                                <input class="uk-input" id="form-horizontal-text" type="password" placeholder="Confirm Password">
+                                            </div>
+                                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-
     </div>
+
     <div id="petty-cash" uk-modal>
-            <div class="uk-modal-dialog">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div class="uk-modal-header">
-                    <h2 class="uk-modal-title">Petty Cash</h2>
-                </div>
-                <div class="uk-modal-body">
-                    <form>
-                        <fieldset class="uk-fieldset">
-    
-                            <legend class="uk-legend">Petty Cash Requisition Form</legend>
-    
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Amount</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
-                                </div>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Petty Cash</h2>
+            </div>
+            <div class="uk-modal-body">
+                <form>
+                    <fieldset class="uk-fieldset">
+
+                        <legend class="uk-legend">Petty Cash Requisition Form</legend>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Amount</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
                             </div>
-    
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Title of Expense</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
-                                </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Title of Expense</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
                             </div>
-    
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
-                                <div class="uk-form-controls">
-                                    <textarea class="uk-textarea" rows="3" placeholder="Short Description"></textarea>
-                                </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
+                            <div class="uk-form-controls">
+                                <textarea class="uk-textarea" rows="3" placeholder="Short Description"></textarea>
                             </div>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="uk-modal-footer uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                    <button class="uk-button uk-button-primary" type="button">Save</button>
-                </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary uk-modal-close" type="button">Save</button>
             </div>
         </div>
-        <div id="online-transfer" uk-modal>
-            <div class="uk-modal-dialog">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div class="uk-modal-header">
-                    <h2 class="uk-modal-title">Online Transfer</h2>
-                </div>
-                <div class="uk-modal-body">
-                    <form>
-                        <fieldset class="uk-fieldset">
-    
-                            <legend class="uk-legend">Funds Requisition Form</legend>
-    
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
-                                </div>
+    </div>
+    <div id="online-transfer" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Online Transfer</h2>
+            </div>
+            <div class="uk-modal-body">
+                <form>
+                    <fieldset class="uk-fieldset">
+
+                        <legend class="uk-legend">Funds Requisition Form</legend>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
                             </div>
-    
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Amount In Words</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
-                                </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Amount In Words</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
                             </div>
-    
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
-                                <div class="uk-form-controls">
-                                    <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
-                                </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Purpose of Payment</label>
+                            <div class="uk-form-controls">
+                                <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
                             </div>
-                        </fieldset>
-                        <fieldset class="uk-fieldset">
-    
-                            <legend class="uk-legend">Online Fund Transfer Form</legend>
-    
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Name of Beneficiary</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="0.00">
-                                </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="uk-fieldset">
+
+                        <legend class="uk-legend">Online Fund Transfer Form</legend>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Name of Beneficiary</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="0.00">
                             </div>
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Account No of Beneficiary</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" id="form-horizontal-text" type="number" placeholder="000">
-                                </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Account No of Beneficiary</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="000">
                             </div>
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
-                                </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Amount In Figures</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="number" placeholder="0.00">
                             </div>
-    
-    
-    
-                            <div class="uk-margin">
-                                <label class="uk-form-label" for="form-horizontal-text">Narration</label>
-                                <div class="uk-form-controls">
-                                    <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
-                                </div>
+                        </div>
+
+
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Narration</label>
+                            <div class="uk-form-controls">
+                                <textarea class="uk-textarea" rows="3" placeholder="Textarea"></textarea>
                             </div>
-    
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="uk-modal-footer uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
-                    <button class="uk-button uk-button-primary  uk-modal-close" type="button" onclick="UIkit.notification({message: 'Request Successfully sent', status: 'success'})">Request</button>
-                </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary  uk-modal-close" type="button" onclick="UIkit.notification({message: 'Request Successfully sent', status: 'success'})">Request</button>
             </div>
         </div>
+    </div>
+    <div id="edit-profile" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">Edit Profile</h2>
+            </div>
+            <div class="uk-modal-body">
+                <form>
+                    <fieldset class="uk-fieldset">
+
+
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Full Name</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Enter Name">
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Job Title</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Enter Job Title">
+                            </div>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label" for="form-horizontal-text">Upload Your Digital Signature</label>
+                            <div uk-form-custom="target: true">
+                                <input type="file">
+                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="uk-modal-footer uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-float-left" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary uk-modal-close" type="button">Save</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
